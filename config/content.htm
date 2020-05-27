@@ -213,10 +213,9 @@
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h1>分組倉儲</h1>
+<p>CD2020 Ag2 </p>
+<p><a href="https://s40723150.github.io/cd2020ag2/content/index.html">https://s40723150.github.io/cd2020ag2/content/index.html</a></p>
 <h1>每周回報</h1>
 <h2>Week 1</h2>
 <p>升級python版本3.8 !</p>
@@ -488,6 +487,23 @@
 <p>利用AJAX的特性，讀取選項的資料(在選擇2a或2b的資料後不會刷新頁面)<br/>讀到的資料利用<span>&lt;input type="submit"&gt;提交所選擇的表單<br/></span><span>送出表單</span>後再利用script執行亂數分組的程式(在網頁上只能執行javascript的程式)</p>
 <p>啟用<strong><span>Google + Domain API</span></strong></p>
 <p>設定<span><strong>OAuth 2.0</strong>客戶端ID</span></p>
+<h2>Week 11</h2>
+<p>直播討論過程 : <a href="https://drive.google.com/open?id=1MYonzUtGwj_QK3I2N-w3YeZzUYwUC-xA&amp;usp=gmai">https://drive.google.com/open?id=1MYonzUtGwj_QK3I2N-w3YeZzUYwUC-xA&amp;usp=gmai</a>l</p>
+<p>小車模型</p>
+<div><a data-saferedirecturl="https://www.google.com/url?q=https://cad.onshape.com/documents/e3eb0b663356e543ec6baaaf/w/a4c0716868b2978a27b12ee4/e/92badca8de429b497d1e9f01&amp;source=gmail&amp;ust=1590635396142000&amp;usg=AFQjCNE9C9LBszbwgo9jBhGOyuB2NDi1sg" href="https://cad.onshape.com/documents/e3eb0b663356e543ec6baaaf/w/a4c0716868b2978a27b12ee4/e/92badca8de429b497d1e9f01" target="_blank">https://cad.onshape.com/<wbr/>documents/<wbr/>e3eb0b663356e543ec6baaaf/w/<wbr/>a4c0716868b2978a27b12ee4/e/<wbr/>92badca8de429b497d1e9f01</a></div>
+<div></div>
+<div>點此連結匯出模型</div>
+<div>
+<h2>Week 13</h2>
+<p>抽籤分組 cdaw 13-2</p>
+<p><a href="http://mde.tw/cdaw13-2/content/index.html">http://mde.tw/cdaw13-2/content/index.html</a></p>
+<p>再推網頁時有發生一些bug，git push時，遠端網頁會跑掉!</p>
+<p>在協同的過程中因版次不同而出現此問題</p>
+<p><img alt="" height="195" src="http://mde.tw/cdaw13-2/images/push.png" width="656"/></p>
+<p>重新 git pull</p>
+<p>然後到靜端修改錯誤!!</p>
+<p>即可</p>
+</div>
 <h1>電子書翻譯</h1>
 <p><strong>MechanicalDesignProcess</strong></p>
 <h4><strong>機械設計過程</strong></h4>
@@ -607,3 +623,11 @@
 <p><span>One of the biggest advantages of molded plastic parts is the second part it does not need. The operation becomes a finished part (compared to "similar" metal parts). usually, Molded plastic parts do not require cosmetic painting on the outside. Most Plastic parts eventually have a molded texture on the outside his is usually achieved by etching the mold with a "texture pattern".</span></p>
 <p>模製塑料零件的最大優點之一是它不需要的第二個零件操作成為成品零件（與“類似”金屬零件相比）。 通常，模製塑料部件不需要在外部進行美容噴漆。 大多數塑料零件最終在外部具有模壓紋理</p>
 <p>通常通過用“紋理圖案”蝕刻模具來實現。</p>
+<h1>Scenes and models</h1>
+<p>場景.模型.環境</p>
+<p><span><big><big>Scenes</big></big></span></p>
+<p>場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
+<p><span><big><big>Models</big></big></span></p>
+<p>模型是場景的子元素。除了文件（“ * .ttm”-文件類型）外，模型本身不能存在，也不能通過自身進行模擬。模型必須包含在場景中才能運行<span>。下圖為scenes &amp; Models 之間的關係:</span></p>
+<p><span><img alt="" height="473" src="https://s40723150.github.io/cd2020ag2/images/chrome_2020-03-24_00-39-57.png" width="524"/></span></p>
+<p><span></span></p>
