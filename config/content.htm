@@ -244,6 +244,189 @@
 <p><span>W6</span></p>
 <p><span><a href="https://cyberbotics.com/doc/guide/index">Webots </a>內容分析</span></p>
 <p>Assignment 1 總整理</p>
+<h2>可攜系統</h2>
+<h4>Create Portable Programming System for Windows 10<br/>Created by 40723150</h4>
+<h4><strong><a href="https://github.com/s40723150/cd2020ag2/blob/master/PDF/cd2020%20ag2%20Project%201%20%E5%8F%AF%E6%94%9C%E7%B3%BB%E7%B5%B1.pdf">pdf連結</a></strong></h4>
+<p>在可攜系統目錄下先創一個 data 目錄</p>
+<p><span>PortableGit：<br/><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> 下載 64-bit Git for Windows Portable 安裝在 data 目錄下</span></p>
+<p><span>MSYS2：<br/><a href="https://www.msys2.org/">https://www.msys2.org/</a> 下載 msys2-x86_64-20190524.exe 並安裝在 data/msys64 的目錄下</span></p>
+<p><span>python3.8.2：<br/></span><a class="link" href="https://www.python.org/downloads/windows/" rel="nofollow noopener noreferrer" target="_blank">https://www.python.org/downloads/windows/</a><span><span> </span>下載 Download Windows x86-64 executable installer 準備安裝 3.8.2 python 解譯器，安裝完成後將完整資料放在 data/py382目錄底下<br/>python pip：<br/></span>到<a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a>頁面，滑鼠右鍵另存新檔到CD2020/data執行</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_140618">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">python get-pip.py</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_163525"></div>
+</div>
+<p><span></span><span>SciTE：<a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a> 下載 full 64-bit download，解壓縮檔案至 data/wscite432，就是可以直接執行的 Scite.exe 編輯器，若希望以 UtF-8 編碼開啟文件，就必須啟用 Options 下拉式功能表中的 Global Options File（同 SciTEGlobal.properties 檔案）其中的預設值 code.page=0 （為Windows 內定的 Big-5 編碼）修改設定為 code.page=65001，表示使用使 UTF-8 編碼，若要開啟即時更新內容，將load.on.activate=1 前面的井字號拿掉，就會即時更新了（SciTE 須重啟）<br/><img caption="false" height="538" src="https://s40723150.github.io/cd2020/images/SciTE_UTF-8.gif" width="400"/><br/>修改成 UTF-8 編碼<br/><img caption="false" height="476" src="https://s40723150.github.io/cd2020/images/set_scite_loadon.gif" width="400"/><br/>修改成即時更新</span></p>
+<p><span>Tiny C Compiler：<br/></span><span><a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a> git clone 整個倉儲到 data 目錄下並命名目錄為 tcc</span></p>
+<p><span>Jupyterlab：<br/><a href="https://github.com/jupyterlab/jupyterlab">https://github.com/jupyterlab/jupyterlab</a> pip install jupyterlab==2.0.1 自動執行安裝</span></p>
+<p><span>Fossil SCM：<br/><a href="https://www.fossil-scm.org/">https://www.fossil-scm.org/</a> 下載 fossil scm 解壓縮後將 fossil.exe 放到 data 目錄下</span></p>
+<p><span>Flutter：<br/><a href="https://github.com/flutter/flutter">https://github.com/flutter/flutter </a> (在 data 目錄底下 git clone https://github.com/flutter/flutter.git -b stable)<br/></span></p>
+<p><span>Visual Studio Code：<br/><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a> (目前是先安裝，安裝完成後把資料放 data/vscode 目錄下)</span></p>
+<p>home/home_mdecourse：存放 ssh 的資料和.gitconfig</p>
+<p>tmp：放 clone 下來的倉儲</p>
+<p>ShareX：<a href="https://getsharex.com/downloads/">https://getsharex.com/downloads/</a></p>
+<p>putty：<a href="http://mde.tw/cp2019/content/USB%20%E7%A8%8B%E5%BC%8F%E7%B3%BB%E7%B5%B1.html">老師整理的 putty</a> 或<span> </span><a href="https://github.com/s40723150/cd2020/raw/master/downloads/putty.7z">個人整理的 putty.7z</a></p>
+<p>start.bat</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_739801">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+<div class="line number20 index19 alt1">20</div>
+<div class="line number21 index20 alt2">21</div>
+<div class="line number22 index21 alt1">22</div>
+<div class="line number23 index22 alt2">23</div>
+<div class="line number24 index23 alt1">24</div>
+<div class="line number25 index24 alt2">25</div>
+<div class="line number26 index25 alt1">26</div>
+<div class="line number27 index26 alt2">27</div>
+<div class="line number28 index27 alt1">28</div>
+<div class="line number29 index28 alt2">29</div>
+<div class="line number30 index29 alt1">30</div>
+<div class="line number31 index30 alt2">31</div>
+<div class="line number32 index31 alt1">32</div>
+<div class="line number33 index32 alt2">33</div>
+<div class="line number34 index33 alt1">34</div>
+<div class="line number35 index34 alt2">35</div>
+<div class="line number36 index35 alt1">36</div>
+<div class="line number37 index36 alt2">37</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">@echo off</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">set Disk=y</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">subst %Disk%: "data"</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces"> </code> </div>
+<div class="line number5 index4 alt2"><code class="html plain">%Disk%:</code></div>
+<div class="line number6 index5 alt1"><code class="html spaces"> </code> </div>
+<div class="line number7 index6 alt2"><code class="html plain">set HomePath=%Disk%:\home</code></div>
+<div class="line number8 index7 alt1"><code class="html plain">set HomeDrive=%Disk%:\home</code></div>
+<div class="line number9 index8 alt2"><code class="html plain">set Home=%Disk%:\home</code></div>
+<div class="line number10 index9 alt1"><code class="html plain">set USERPROFILE=%Disk%:\home</code></div>
+<div class="line number11 index10 alt2"><code class="html spaces"> </code> </div>
+<div class="line number12 index11 alt1"><code class="html plain">REM 將系統 Python 程式的 io 設為 utf-8</code></div>
+<div class="line number13 index12 alt2"><code class="html plain">set PYTHONIOENCODING="utf-8"</code></div>
+<div class="line number14 index13 alt1"><code class="html spaces"> </code> </div>
+<div class="line number15 index14 alt2"><code class="html plain">#REM for putty</code></div>
+<div class="line number16 index15 alt1"><code class="html plain">#Set GIT_HOME=%CDisk%:\portablegit\bin\</code></div>
+<div class="line number17 index16 alt2"><code class="html plain">#Set GIT_SSH=%Disk%:\putty\plink.exe</code></div>
+<div class="line number18 index17 alt1"><code class="html spaces"> </code> </div>
+<div class="line number19 index18 alt2"><code class="html plain">set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;</code></div>
+<div class="line number20 index19 alt1"><code class="html plain">set PYTHONHOME=%Disk%:\py382</code></div>
+<div class="line number21 index20 alt2"><code class="html spaces"> </code> </div>
+<div class="line number22 index21 alt1"><code class="html plain">set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;</code></div>
+<div class="line number23 index22 alt2"><code class="html plain">set path_msys2=%Disk%:\msys64\mingw64\bin;</code></div>
+<div class="line number24 index23 alt1"><code class="html plain">set path_git=%Disk%:\portablegit\bin;</code></div>
+<div class="line number25 index24 alt2"><code class="html plain">set path_tcc=%Disk%:\tcc;</code></div>
+<div class="line number26 index25 alt1"><code class="html spaces"> </code> </div>
+<div class="line number27 index26 alt2"><code class="html plain">path=%Disk%:;%path_python%;%path_msys2%;%path_git%;%path_tcc%;</code></div>
+<div class="line number28 index27 alt1"><code class="html spaces"> </code> </div>
+<div class="line number29 index28 alt2"><code class="html plain">start /MIN cmd.exe</code></div>
+<div class="line number30 index29 alt1"><code class="html plain">start /MIN cmd.exe</code></div>
+<div class="line number31 index30 alt2"><code class="html plain">start /MIN cmd.exe</code></div>
+<div class="line number32 index31 alt1"><code class="html plain">start /MIN cmd.exe</code></div>
+<div class="line number33 index32 alt2"><code class="html spaces"> </code> </div>
+<div class="line number34 index33 alt1"><code class="html plain">start /MIN %Disk%:\wscite432\wscite\SciTE.exe</code></div>
+<div class="line number35 index34 alt2"><code class="html plain">start /MIN %Disk%:\wscite432\wscite\SciTE.exe</code></div>
+<div class="line number36 index35 alt1"><code class="html spaces"> </code> </div>
+<div class="line number37 index36 alt2"><code class="html plain">Exit</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_998127"></div>
+</div>
+<p>stop.bat</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_850557">
+<div>
+<div class="syntaxhighlighter html" id="highlighter_186813">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">@echo off</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">set Disk=y</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">path=%PATH%;</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces"> </code> </div>
+<div class="line number5 index4 alt2"><code class="html plain">taskkill /IM python.exe /F</code></div>
+<div class="line number6 index5 alt1"><code class="html plain">taskkill /IM pythonw.exe /F</code></div>
+<div class="line number7 index6 alt2"><code class="html plain">taskkill /IM scite.exe /F</code></div>
+<div class="line number8 index7 alt1"><code class="html spaces"> </code> </div>
+<div class="line number9 index8 alt2"><code class="html plain">REM 終止虛擬硬碟與目錄的對應</code></div>
+<div class="line number10 index9 alt1"><code class="html plain">subst %Disk%: /D</code></div>
+<div class="line number11 index10 alt2"><code class="html plain">REM 關閉 cmd 指令視窗</code></div>
+<div class="line number12 index11 alt1"><code class="html plain">taskkill /IM cmd.exe /F</code></div>
+<div class="line number13 index12 alt2"><code class="html spaces"> </code> </div>
+<div class="line number14 index13 alt1"><code class="html plain">EXIT</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/HQzz7f9IopE" width="560"></iframe><br/>詳細流程在<a href="https://s40723150.github.io/cd2020/content/W2.html">W2</a>頁面</p>
+<p><span>基礎可攜系統</span><a href="https://drive.google.com/file/d/15b_VXiaXYLqaMuMAvAeZKegX4eSkiU70/view">下載<br/></a><a href="https://drive.google.com/open?id=1Ghi3rTB-HIZEn49PWgfOap7aha2UZvK9">有配置Webots<br/></a><a href="https://drive.google.com/open?id=1TN1NWb0rj675Ld-mb4QRNn-0ECRb2eZG">有配置Webots+</a><span><a href="https://drive.google.com/open?id=1TN1NWb0rj675Ld-mb4QRNn-0ECRb2eZG">CoppeliaSim</a>(含</span><span>xelatex)<br/>P.S. 可以下載可攜系統的leo都已經升級到6.2.1版本了</span></p>
 <h2>四輪小車</h2>
 <h3>Scenes and models</h3>
 <p>場景.模型.環境</p>
@@ -739,13 +922,6 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span>One of the biggest advantages of molded plastic parts is the second part it does not need. The operation becomes a finished part (compared to "similar" metal parts). usually, Molded plastic parts do not require cosmetic painting on the outside. Most Plastic parts eventually have a molded texture on the outside his is usually achieved by etching the mold with a "texture pattern".</span></p>
 <p>模製塑料零件的最大優點之一是它不需要的第二個零件操作成為成品零件（與“類似”金屬零件相比）。 通常，模製塑料部件不需要在外部進行美容噴漆。 大多數塑料零件最終在外部具有模壓紋理</p>
 <p>通常通過用“紋理圖案”蝕刻模具來實現。</p>
-<h1>Scenes and models</h1>
-<p>場景.模型.環境</p>
-<p><span><big><big>Scenes</big></big></span></p>
-<p>場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
-<p><span><big><big>Models</big></big></span></p>
-<p>模型是場景的子元素。除了文件（“ * .ttm”-文件類型）外，模型本身不能存在，也不能通過自身進行模擬。模型必須包含在場景中才能運行<span>。下圖為scenes &amp; Models 之間的關係:</span></p>
-<p><span><img alt="" height="473" src="https://s40723150.github.io/cd2020ag2/images/chrome_2020-03-24_00-39-57.png" width="524"/></span></p>
 <h1>VirtualBox</h1>
 <h4>Setting VirtualBox Network</h4>
 <p>在VirtualBox→Files→Preferences<span>→Network<br/>新增一個網路設定，支援DHCP和IPV6</span></p>
