@@ -218,7 +218,8 @@
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
 <h1>Ag2</h1>
-<h1>亂數分組紀錄</h1>
+<h2>紀錄</h2>
+<p>亂數分組紀錄</p>
 <p>W2：<br/>相關資料尋找、查詢、閱讀<br/>簡易python撰寫 練習 運用 <br/>編寫亂數分組程序<br/>討論其關聯性及應用</p>
 <p><span>W3：<br/>製作相關內容整理<br/></span><span>編輯程序 流程最簡化<br/></span><span>PDF製作 編排整理網誌 Revral 撰寫</span></p>
 <p><span>W5：</span></p>
@@ -229,7 +230,7 @@
 <p><span>W3：<br/>配置webots到可攜系統上，測試msys2裡建立gcc編譯環境。</span></p>
 <p><span>W4：<br/>將 xelatex 配置到可攜系統上，完成測試msys2裡建立gcc編譯環境。<br/></span></p>
 <p><span><span>W5：<br/>將 CoppeliaSim 放到可攜系統上。將 leo 升級到6.2.1。</span></span></p>
-<h1>四輪小車紀錄</h1>
+<p>四輪小車紀錄</p>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
 <p>了解製作四輪機器人所需功能</p>
@@ -242,7 +243,46 @@
 <p><span><a href="https://cyberbotics.com/doc/guide/index">Webots<span> </span></a>內容分析</span></p>
 <p><span>W6</span></p>
 <p><span><a href="https://cyberbotics.com/doc/guide/index">Webots </a>內容分析</span></p>
-<p>Assignment 1 總整理</p><h1>每周回報</h1>
+<p>Assignment 1 總整理</p>
+<h2>四輪小車</h2>
+<h3>Scenes and models</h3>
+<p>場景.模型.環境</p>
+<p><span><big><big>Scenes</big></big></span></p>
+<p>場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
+<p><span><big><big>Models</big></big></span></p>
+<p>模型是場景的子元素。除了文件（“ * .ttm”-文件類型）外，模型本身不能存在，也不能通過自身進行模擬。模型必須包含在場景中才能運行<span>。下圖為scenes &amp; Models 之間的關係:</span></p>
+<p><span><img alt="" height="473" src="https://s40723150.github.io/cd2020ag2/images/chrome_2020-03-24_00-39-57.png" width="524"/></span></p>
+<h3>Calculation modules</h3>
+<p><span><big><big>Collision detection</big></big></span></p>
+<p>CoppeliaSim可以非常靈活的方式檢測兩個可碰撞實體之間的碰撞。 該計算是精確的干擾計算。 碰撞檢測模塊將僅檢測碰撞； 但是它不會直接對它們做出反應（有關碰撞響應，請參見<a href="https://www.coppeliarobotics.com/helpFiles/en/dynamicsModule.htm">dynamics module</a>）。</p>
+<p><span><big><big>Distance calculation</big></big></span></p>
+<p>CoppeliaSim可以非常靈活的方式測量兩個可測量實體之間的最小距離。 該計算是精確的最小距離計算。 距離計算模塊將僅測量距離； 但是它不會直接對他們做出反應。</p>
+<p><span><big><big>Inverse kinematics</big></big></span></p>
+<p>CoppeliaSim的逆運動學（IK）計算模塊非常強大且靈活。 它允許以逆運動學模式（IK模式）或正向運動學模式（FK模式）處理幾乎任何類型的機構。IK問題可以看作是找到與給定本體元素（通常是末端執行器）的某些特定位置和/或方向相對應的關節值之一。 一般而言，它是從任務空間坐標到關節空間坐標的轉換。例如，對於串接式機械手臂，問題將是在給定末端執行器的位置（和/或方向）的情況下找到操縱器中所有關節的值。 相反的在給定關節值的情況下找到末端執行器的位置-被稱為FK問題，通常被認為比IK更容易完成。在處理開放式運動學系列時，這確實是正確的，但對於一般類型的機械配置卻不成立，例如以下所示：</p>
+<p>參考：<a href="https://www.coppeliarobotics.com/helpFiles/en/graphs.htm">graphs</a> ＆ <a href="https://www.coppeliarobotics.com/helpFiles/en/dataStreamTypes.htm">graph data stream types</a></p>
+<p>運動學功能也可用於獨立應用程序（即，不直接屬於CoppeliaSim框架的應用程序，例如另一台計算機，機器人或控制器上的應用程序）。 通過<a href="https://www.coppeliarobotics.com/helpFiles/index.html">Coppelia運動學例程</a>可以做到這一點。</p>
+<p><span><big><big>Dynamics</big></big></span></p>
+<p>CoppeliaSim的動力學模塊當前支持下列四種不同的物理引擎。用戶在任何時候都可以根據自己的仿真需求自由地從一種發動機快速切換到另一種發動機。物理引擎支持如此多樣化的原因是，物理模擬是一項複雜的任務，可以通過不同程度的精度，速度或支持多種功能來實現：</p>
+<ul>
+<ul>
+<ul>
+<li>
+<p><a href="http://www.bulletphysics.org/">Bullet physics library</a><span>:</span></p>
+<p>一個開源物理引擎，具有3D碰撞檢測，剛體動力學和<span>soft body dynamics</span>（CoppeliaSim當前不支持該功能）。它用於遊戲和電影的視覺效果。它通常被視為遊戲物理引擎。</p>
+</li>
+<li>
+<p><span><a href="http://www.ode.org/">Open Dynamics Engine (ODE)</a><span>:</span></span></p>
+一個具有兩個主要組成部分的開源物理引擎：剛體動力學和碰撞檢測。它已在許多應用程序和遊戲中使用。它通常被視為遊戲物理引擎。</li>
+<li>
+<p><span><span><a href="https://www.cm-labs.com/vortex-studio/">VortexÂ® Studio</a><span>:<span> </span></span></span></span></p>
+非開源商業物理學引擎，可產生高保真物理模擬。 Vortex提供了大量物理屬性的實際參數（即對應於物理單位），使該引擎既逼真又精確。 Vortex主要用於高性能/高精度工業和研究應用。 CoppeliaSim的Vortex插件基於Vortex Studio，該插件要求每個用戶向CM Labs註冊以獲取免費許可證密鑰。</li>
+<li>
+<p><span><span><span><a href="http://www.newtondynamics.com/">Newton Dynamics</a><span>:<span> </span></span></span></span></span></p>
+Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了確定性求解器，它不是基於傳統的LCP或<a href="https://zh.wikipedia.org/wiki/%E8%BF%AD%E4%BB%A3">疊代</a>方法，而是分別具有兩者的穩定性和速度。這項功能使Newton Dynamics不僅成為遊戲的工具，而且還成為任何實時物理模擬的工具。當前的插件執行是BETA版本。</li>
+</ul>
+</ul>
+</ul>
+<h1>每周回報</h1>
 <p>每周進度及內容</p>
 <h2>Week 1</h2>
 <p>升級python版本3.8 !</p>
